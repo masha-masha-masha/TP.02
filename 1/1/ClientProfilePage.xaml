@@ -1,0 +1,75 @@
+﻿<Page x:Class="Прокат_авто.ClientProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Профиль клиента"
+      Background="#ECF0F1">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<Border Background="White" CornerRadius="5" Margin="10" Padding="20">
+			<StackPanel>
+				<TextBlock Text="Личные данные" FontSize="20" FontWeight="Bold" 
+                           Foreground="#2C3E50" Margin="0,0,0,15"/>
+
+				<Border Background="#F8F9FA" CornerRadius="5" Padding="15" Margin="0,0,0,15">
+					<StackPanel>
+						<TextBlock Text="Фамилия" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtSurname" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Имя" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtName" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Отчество" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtPatronymic" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Телефон" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtPhone" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Адрес" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtAddress" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Email" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtEmail" FontSize="16" Margin="0,5,0,10"/>
+					</StackPanel>
+				</Border>
+
+				<TextBlock Text="Паспортные данные" FontSize="20" FontWeight="Bold" 
+                           Foreground="#2C3E50" Margin="0,0,0,15"/>
+
+				<Border Background="#F8F9FA" CornerRadius="5" Padding="15" Margin="0,0,0,15">
+					<StackPanel>
+						<TextBlock Text="Серия" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtPassportSeries" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Номер" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtPassportNumber" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Кем выдан" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtIssuedBy" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Дата выдачи" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtWhenIssued" FontSize="16" Margin="0,5,0,10"/>
+					</StackPanel>
+				</Border>
+
+				<TextBlock Text="Водительское удостоверение" FontSize="20" FontWeight="Bold" 
+                           Foreground="#2C3E50" Margin="0,0,0,15"/>
+
+				<Border Background="#F8F9FA" CornerRadius="5" Padding="15">
+					<StackPanel>
+						<TextBlock Text="Номер ВУ" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtLicenseNumber" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Категория" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtCategory" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Дата выдачи" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtLicenseIssueDate" FontSize="16" Margin="0,5,0,10"/>
+
+						<TextBlock Text="Срок действия" FontWeight="Bold" FontSize="14"/>
+						<TextBlock x:Name="txtValidityPeriod" FontSize="16" Margin="0,5,0,10"/>
+					</StackPanel>
+				</Border>
+			</StackPanel>
+		</Border>
+	</ScrollViewer>
+</Page>

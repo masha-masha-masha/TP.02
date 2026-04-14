@@ -1,0 +1,61 @@
+﻿<Window x:Class="Прокат_авто.AddPaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Добавление платежа" 
+        Height="500" 
+        Width="450"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<Grid Margin="20">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<TextBlock Grid.Row="0" Text="➕ Добавление платежа по договору" FontSize="18" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+			<!-- Дата платежа -->
+			<TextBlock Grid.Row="1" Text="Дата платежа:" FontWeight="Bold" Margin="0,0,0,5" />
+			<DatePicker x:Name="dpPaymentDate" Grid.Row="2" SelectedDate="{x:Static sys:DateTime.Today}" 
+                        Margin="0,0,0,15" Height="30"/>
+
+			<!-- Сумма -->
+			<TextBlock Grid.Row="3" Text="Сумма платежа (руб.):" FontWeight="Bold" Margin="0,0,0,5"/>
+			<TextBox x:Name="txtAmount" Grid.Row="4" Margin="0,0,0,15" Height="30" 
+                     PreviewTextInput="txtAmount_PreviewTextInput"/>
+
+			<!-- Метод оплаты -->
+			<TextBlock Grid.Row="5" Text="Метод оплаты:" FontWeight="Bold" Margin="0,0,0,5"/>
+			<ComboBox x:Name="cmbPaymentMethod" Grid.Row="6" DisplayMemberPath="Title" 
+                      SelectedValuePath="Id" Margin="0,0,0,15" Height="30"/>
+
+			<!-- Тип платежа -->
+			<TextBlock Grid.Row="7" Text="Тип платежа:" FontWeight="Bold" Margin="0,0,0,5"/>
+			<ComboBox x:Name="cmbPaymentType" Grid.Row="8" DisplayMemberPath="Title" 
+                      SelectedValuePath="Id" Margin="0,0,0,20" Height="30"/>
+
+			<!-- Кнопки -->
+			<StackPanel Grid.Row="9" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+				<Button Content="💾 Сохранить" Width="120" Height="35" Margin="5"
+                        Background="#27AE60" Foreground="White" FontWeight="Bold"
+                        Click="btnSave_Click"/>
+				<Button Content="❌ Отмена" Width="120" Height="35" Margin="5"
+                        Background="#E74C3C" Foreground="White" FontWeight="Bold"
+                        Click="btnCancel_Click"/>
+			</StackPanel>
+		</Grid>
+	</ScrollViewer>
+</Window>

@@ -1,0 +1,23 @@
+{
+  "DataSource": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=wer23;SearchPath=public",
+  "Provider": "EntityFramework6.Npgsql",
+  "ContextName": "DataBaseContext",
+  "ContextDirectory": "./DataBase",
+  "OutputDirectory": "./DataBase",
+  "ContextNamespace": null,
+  "Namespace": null,
+  "Schemas": null,
+  "Tables": null,
+  "ProjectDirectory": ".",
+  "StartupProjectDirectory": ".",
+  "TargetFramework": null,
+  "Configuration": null,
+  "TargetRuntime": null,
+  "DataAnnotations": false,
+  "UseDatabaseNames": false,
+  "NoOnConfiguring": false,
+  "NoPluralize": true,
+  "Force": true,
+  "NoBuild": true,
+  "Verbose": false
+}

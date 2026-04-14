@@ -1,0 +1,55 @@
+﻿<Window x:Class="Прокат_авто.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Авторизация - Drive Каршеринг" 
+        Height="520" 
+        Width="450"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+	<Grid Background="#1A237E">
+
+		<StackPanel Margin="25" VerticalAlignment="Center" >
+			<Image Style="{StaticResource logoImageStyle}" Height="56" Width="130"  HorizontalAlignment="Center" Margin="0,0,0,15" RenderTransformOrigin="0.553,0.455"/>
+
+			<TextBlock Text="Вход в систему" FontSize="20" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,0,0,30" Foreground="White"/>
+
+			<!-- Поле Логин -->
+			<TextBlock Text="Логин:" Margin="0,5" FontSize="14" Foreground="White"/>
+			<TextBox x:Name="txtLogin" Margin="0,0,0,15" Height="40" 
+                     FontSize="14" Padding="10,0" 
+                     HorizontalContentAlignment="Left"
+                     VerticalContentAlignment="Center"/>
+
+			<!-- Поле Пароль -->
+			<TextBlock Text="Пароль:" Margin="0,5" FontSize="14" Foreground="White"/>
+			<PasswordBox x:Name="txtPassword" KeyDown="TxtPassword_KeyDown" 
+                         Margin="0,0,0,25" Height="40" FontSize="14"
+                         Padding="10,0"/>
+
+			<!-- Кнопки -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+				<Button x:Name="btnLogin" Content="Войти" Width="120" Height="45" 
+                        Click="btnLogin_Click" Margin="10,0" FontSize="14" 
+                        Background="#3498DB" Foreground="White" FontWeight="Bold"
+                        Cursor="Hand"/>
+				<Button x:Name="btnRegister" Content="Регистрация" Width="120" Height="45"
+                        Click="btnRegister_Click" Margin="10,0" FontSize="14"
+                        Background="#7F8C8D" Foreground="White" FontWeight="Bold"
+                        Cursor="Hand"/>
+			</StackPanel>
+
+			<!-- Статус/Ошибка -->
+			<Border Background="White" CornerRadius="5" Margin="0,25,0,0" Padding="12">
+				<TextBlock x:Name="txtError" Text="Введите логин и пароль" 
+                           Foreground="#7F8C8D" TextAlignment="Center" 
+                           FontSize="13" TextWrapping="Wrap"/>
+			</Border>
+		</StackPanel>
+	</Grid>
+</Window>
